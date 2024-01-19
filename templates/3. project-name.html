@@ -1,0 +1,23 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ project.name }}</title>
+</head>
+<body>
+<h1>{{ project.name }}</h1>
+<p>{{ project.description }}</p>
+<h2>Historical Context</h2>
+<p>{{ project.historical_context }}</p>
+<h2>Images</h2>
+<ul>
+{% for image in project.images %}
+<li><img src="{{ image }}" alt="{{ project.name }}"></li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
